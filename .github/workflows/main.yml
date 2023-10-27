@@ -60,7 +60,6 @@ jobs:
 
   format:
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: Run black formatter
         uses: rickstaa/action-black@v1.3.1
