@@ -29,4 +29,3 @@ jobs:
           pipenv run pytest
       - name: Run black formatter
         uses: rickstaa/action-black@v1.3.1
-
