@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -15,9 +16,6 @@ jobs:
       - name: Install pipenv
         run: |
           python -m pip install --upgrade pipenv wheel
-      - name: Install Jupyter dependencies for black
-        run: |
-          pipenv install "black[jupyter]"
       - name: Install dependencies
         run: |
           pipenv install --deploy --dev
