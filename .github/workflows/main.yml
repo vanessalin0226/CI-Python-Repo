@@ -26,9 +26,13 @@ jobs:
         run: |
           cd app
 
-      - name: Run test suite
+  coverage:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Run coverage
         run: |
-          pipenv run pytest
+          pipenv run pytest --cov=app
 
   format:
     runs-on: ubuntu-latest
